@@ -6,7 +6,8 @@
             [gov.nist.spntools.reach  :as pnr]
             [pdenno.gspn.core :as gspn :refer :all]))
 
-;;; ToDo move other reach tests, current in core-test into here.
+(defn =* [x correct tol]
+  (< (- correct tol) x (+ correct tol)))
 
 (defn run-all
   [filename]
@@ -14,8 +15,6 @@
   (-> filename
       pnml/read-pnml
       pn-steady-state))
-
-;(def m (run-ready "data/weights.xml"))
 
 (defn run-ready
   [filename]
