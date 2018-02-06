@@ -109,8 +109,6 @@
             [5.0 0.0 0.0 0.0 0.0 0.0 -6.0 1.0]
             [0.0 5.0 0.0 0.0 0.0 0.0 0.0 -5.0]]))))
 
-
-
 #_(deftest gauss-jordan-elimination
   (testing "Gauss-Jordan elimination solution, inverse and determinant"
     (let [result (gj-explicit [[1.0 2.0 3.0] [3.0 2.0 1.0] [2.0 1.0 3.0]] [12.0 24.0 36.0])
